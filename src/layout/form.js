@@ -37,7 +37,7 @@ function Form() {
           <option value="owoce">Owoce</option>
         </select>
         <span className="material-symbols-outlined">expand_all</span>
-        {errors.selectedOption && (
+        {selectedOption === "" && errors.selectedOption && (
           <p className="error">{errors.selectedOption.message}</p>
         )}
       </div>
