@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  & input {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: 2px solid #dddddd;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      transform: translate(-50%, -50%);
+      content: "\2713";
+      font-size: 17px;
+      text-align: center;
+      color: white;
+    }
+    &:checked::before {
+      background-color: black;
+      border-color: black;
+      border-radius: 5px;
+    }
+  }
+  & h3 {
+    font-weight: normal;
+  }
+  & button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    & .active {
+      transform: rotate(180deg);
+    }
+  }
+}

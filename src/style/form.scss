@@ -1,0 +1,61 @@
+form.foodSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  & h3 {
+    margin-bottom: 7px;
+  }
+  & .foodSelect_select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    & select {
+      font-family: "Noto Sans", sans-serif;
+      width: 200px;
+      padding: 10px;
+      -webkit-appearance: none;
+      border-radius: 7px;
+      border: 1px solid #e1e4e1;
+      color: grey;
+      font-weight: bold;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      & .default {
+        color: gray;
+      }
+      &:focus {
+        color: black;
+      }
+    }
+    & span {
+      position: absolute;
+      right: 7%;
+      color: gray;
+      pointer-events: none;
+      transform: scale(0.8);
+    }
+    & .error {
+      position: absolute;
+      right: -100%;
+      color: red;
+    }
+  }
+  & button {
+    background-color: #18181b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 60px;
+    &:active {
+      background-color: #3a3a3b;
+      box-shadow: inset 0px 0px 2px 1px rgba(255, 255, 255, 1);
+    }
+  }
+}

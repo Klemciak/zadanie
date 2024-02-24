@@ -1,0 +1,101 @@
+.content {
+  width: 300px;
+  & .fruitList {
+    display: none;
+    &.active {
+      display: block;
+    }
+    & li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+      border-bottom: 1px solid rgb(218, 218, 218);
+
+      & h4 {
+        margin-left: 47px;
+        font-weight: normal;
+      }
+      & input {
+        position: absolute;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        border: 2px solid #dddddd;
+        outline: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 25px;
+          height: 25px;
+          transform: translate(-50%, -50%);
+          content: "\2713";
+          font-size: 17px;
+          text-align: center;
+          color: white;
+        }
+        &:checked::before {
+          background-color: black;
+          border-color: black;
+          border-radius: 5px;
+        }
+      }
+      & span {
+        margin-right: 30px;
+        max-width: 120px;
+        word-wrap: break-word;
+        font-weight: bold;
+      }
+    }
+  }
+  & .priceList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin: 5px 0;
+      width: 350px;
+      & h4 {
+        font-weight: normal;
+        margin-bottom: 15px;
+      }
+      & input {
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #e1e4e1;
+        &:focus {
+          outline: none;
+        }
+      }
+      & button {
+        background-color: #18181b;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 7px;
+        cursor: pointer;
+
+        &:active {
+          background-color: #3a3a3b;
+          box-shadow: inset 0px 0px 2px 1px rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+}
